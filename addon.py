@@ -1,5 +1,5 @@
 from xbmcswift2 import Plugin, xbmcgui
-from resources.lib import chapotraphouse
+from resources.lib import mainaddon
 import requests
 import re
 from bs4 import BeautifulSoup
@@ -31,11 +31,11 @@ def all_episodes():
     """
     contains playable podcasts listed as just-in
     """
-    soup = chapotraphouse.get_soup(URL)
+    soup = mainaddon.get_soup(URL)
     
-    playable_podcast = chapotraphouse.get_playable_podcast(soup)
+    playable_podcast = mainaddon.get_playable_podcast(soup)
     
-    items = chapotraphouse.compile_playable_podcast(playable_podcast)
+    items = mainaddon.compile_playable_podcast(playable_podcast)
 
     return items
 
@@ -45,11 +45,11 @@ def all_episodes1():
     """
     contains playable podcasts listed as just-in
     """
-    soup = chapotraphouse.get_soup(URL)
+    soup = mainaddon.get_soup(URL)
     
-    playable_podcast1 = chapotraphouse.get_playable_podcast1(soup)
+    playable_podcast1 = mainaddon.get_playable_podcast1(soup)
     
-    items = chapotraphouse.compile_playable_podcast1(playable_podcast1)
+    items = mainaddon.compile_playable_podcast1(playable_podcast1)
 
     return items
 

@@ -43,7 +43,7 @@ def get_playable_podcast(soup):
         item = {
                 'url': link,
                 'title': title,
-                'desc': desc,
+#                'desc': desc,
                 'thumbnail': "/home/osmc/.kodi/addons/plugin.audio.NPRpodcasts/resources/media/icon.jpg"
         }
         
@@ -63,7 +63,7 @@ def compile_playable_podcast(playable_podcast):
             'label': podcast['title'],
             'thumbnail': podcast['thumbnail'],
             'path': podcast['url'],
-            'info': podcast['desc'],
+#            'info': podcast['desc'],
             'is_playable': True,
     })
 
@@ -98,7 +98,7 @@ def get_playable_podcast1(soup):
         item = {
                 'url': link,
                 'title': title,
-                'desc': desc,
+#                'desc': desc,
                 'thumbnail': "/home/osmc/.kodi/addons/plugin.audio.NPRpodcasts/resources/media/icon.jpg"
         }
         
