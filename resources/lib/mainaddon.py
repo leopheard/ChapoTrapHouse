@@ -8,7 +8,6 @@ def get_soup(url):
     """
     page = requests.get(url)
     soup = BeautifulSoup(page.text, 'html.parser')
-    
     print "type: ", type(soup)
     return soup
 
@@ -44,7 +43,7 @@ def get_playable_podcast(soup):
                 'url': link,
                 'title': title,
 #                'desc': desc,
-                'thumbnail': "/home/osmc/.kodi/addons/plugin.audio.NPRpodcasts/resources/media/icon.jpg"
+                'thumbnail': "/home/osmc/.kodi/addons/plugin.audio.chapotraphouse/resources/media/icon.jpg"
         }
         
         subjects.append(item) 
@@ -99,11 +98,10 @@ def get_playable_podcast1(soup):
                 'url': link,
                 'title': title,
 #                'desc': desc,
-                'thumbnail': "/home/osmc/.kodi/addons/plugin.audio.NPRpodcasts/resources/media/icon.jpg"
+                'thumbnail': "/home/osmc/.kodi/addons/plugin.audio.chapotraphouse/resources/media/icon.jpg"
         }
         
         subjects.append(item) 
-    
     return subjects
 
 
